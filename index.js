@@ -9,6 +9,9 @@ let timerId
 let xDirection = -2
 let yDirection = 2
 let scores = 0
+// let isGameStarted = false;
+
+
 
 
 const userStart = [230, 10]
@@ -141,10 +144,10 @@ function checkForCollisions() {
             score.innerHTML = scores
 
             // check for win
-            if(blocks.length === 0){
-                score.innerHTML= 'You win'
-                   clearInterval(timerId)
-                document.removeEventListener('keydown',moveUser)
+            if (blocks.length === 0) {
+                score.innerHTML = 'You win'
+                clearInterval(timerId)
+                document.removeEventListener('keydown', moveUser)
             }
 
         }
@@ -157,12 +160,11 @@ function checkForCollisions() {
 
     ) { changeDirection() }
 
-    if ( (ballCurrentPosition[0] > currentPosition[0] &&
+    if ((ballCurrentPosition[0] > currentPosition[0] &&
         ballCurrentPosition[0] < currentPosition[0] + blockWidth)
-          && (ballCurrentPosition[1] > currentPosition[1]
+        && (ballCurrentPosition[1] > currentPosition[1]
             && ballCurrentPosition[1] < currentPosition[1] + blockHight)
-    )
-            { changeDirection()}
+    ) { changeDirection() }
 
     // check for game over
     if (ballCurrentPosition[1] <= 0) {
@@ -192,3 +194,12 @@ function changeDirection() {
         return
     }
 }
+
+
+const refreshButton = document.getElementById("refreshButton");
+
+// Add a click event listener to the button
+refreshButton.addEventListener("click", function() {
+    
+    location.reload();
+});
