@@ -18,23 +18,26 @@ body{
 }
 .start{
     height: 50px;
-    width: 100%;
+    width: 50%;
     text-decoration: none;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: transparent;
     
 }
 button{
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding:  20px 20px;
     background: aqua;
     color: #0b0a0a;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -76,7 +79,7 @@ button{
 #score{
     color: yellow;
     font-weight: 700;
-    margin-top: 50px;
+    margin-left: 50%;
     font-size: 30px;
     display: flex;
     justify-content: center;
